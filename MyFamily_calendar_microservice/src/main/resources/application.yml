@@ -1,0 +1,15 @@
+#config Discovery server
+
+spring:
+  application:
+    name: family_calendar
+    
+
+eureka:
+  client:
+   serviceUrl:
+    defaultZone: http://localhost:8761/eureka
+  
+
+server:
+  port: 2345
