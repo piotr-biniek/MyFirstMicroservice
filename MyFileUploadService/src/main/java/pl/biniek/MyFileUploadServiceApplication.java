@@ -45,6 +45,7 @@ public class MyFileUploadServiceApplication {
 	}
 	
 	
+	// rózne metody konwersji i zapisu
 	public File multipartToFile(MultipartFile multipart) throws IllegalStateException, IOException 	{
 		String destinantionDirectory = System.getProperty("user.home")+"\\Downloads\\";
 		File file = new File(destinantionDirectory+multipart.getOriginalFilename());
