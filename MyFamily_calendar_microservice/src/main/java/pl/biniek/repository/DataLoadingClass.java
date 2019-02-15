@@ -11,11 +11,8 @@ public class DataLoadingClass implements CommandLineRunner {
 	
 	@Autowired
 	EventRepo repo;
-
-	
 	
 	private DataLoadingClass(EventRepo repo) {
-	//	super();
 		this.repo = repo;
 	}
 

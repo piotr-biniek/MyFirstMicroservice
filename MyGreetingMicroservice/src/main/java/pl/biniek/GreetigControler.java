@@ -3,7 +3,7 @@ package pl.biniek;
 import java.util.Locale;
 import java.util.concurrent.atomic.AtomicLong;
 
-import org.springframework.dao.EmptyResultDataAccessException;
+//import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
