@@ -1,0 +1,52 @@
+##config Discovery server
+#
+#spring:
+#  application:
+#    name: zuul
+#    
+#
+#eureka:
+#  client:
+#   serviceUrl:
+#    defaultZone: http://localhost:8761/eureka
+#  
+#
+#server:
+#  port: 2347
+
+zuul:
+  routes:  
+    uaa:
+      path: /authservice/**
+      sensitiveHeaders:
+      serviceId: authservice
+    account:
+      path: /accountservice/**
+      sensitiveHeaders: 
+      serviceId: accountservice
+    hello:
+      path: /hello/**
+      sensitiveHeaders: 
+      serviceId: hello    
+    family_calendar:
+      path: /family_calendar/**
+      sensitiveHeaders: 
+      serviceId: family_calendar    
+
+
+
+
+eureka:
+  client:
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/    
+
+
+spring:  
+  application:
+    name: gateway-server
+
+    
+server:  
+  port: ${PORT:9999}

@@ -12,6 +12,8 @@ import org.springframework.security.oauth2.config.annotation.web.configurers.Aut
  * spring.security.user.password=pass
  * spring.security.user.roles=USER
  */
+
+//based on priya-k-
 @Configuration
 public class SecurityKonfig extends GlobalAuthenticationConfigurerAdapter {
 

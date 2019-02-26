@@ -6,8 +6,18 @@
 	},
 	"item": [
 		{
-			"name": "Delete event Copy",
+			"name": "Delete event OAuth Token",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2e0918fb-3001-48c3-a123-25fd8c547b30",
+							"type": "string"
+						}
+					]
+				},
 				"method": "DELETE",
 				"header": [
 					{
@@ -49,8 +59,18 @@
 			"response": []
 		},
 		{
-			"name": "get specufied event Copy",
+			"name": "get specufied event OAuth Token",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2e0918fb-3001-48c3-a123-25fd8c547b30",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [
 					{
@@ -84,8 +104,18 @@
 			"response": []
 		},
 		{
-			"name": "Create event Copy",
+			"name": "Create event OAuthToken",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2e0918fb-3001-48c3-a123-25fd8c547b30",
+							"type": "string"
+						}
+					]
+				},
 				"method": "POST",
 				"header": [
 					{
@@ -123,15 +153,20 @@
 			"response": []
 		},
 		{
-			"name": "Get  ALL events Copy",
+			"name": "Get  ALL events OAuthToken",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2e0918fb-3001-48c3-a123-25fd8c547b30",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "Basic YWRtaW46bXlwYXNzd29yZA=="
-					}
-				],
+				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": ""
@@ -217,7 +252,7 @@
 			"response": []
 		},
 		{
-			"name": "Get  hello",
+			"name": "Get  hello OAuthRequired",
 			"request": {
 				"method": "GET",
 				"header": [
@@ -245,7 +280,7 @@
 			"response": []
 		},
 		{
-			"name": "Simple file upload",
+			"name": "Simple file upload NoAuth Required",
 			"request": {
 				"method": "PUT",
 				"header": [
@@ -325,6 +360,157 @@
 					"body": null
 				}
 			]
+		},
+		{
+			"name": "login Try",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46bXlwYXNzd29yZA=="
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:9999/hello",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9999",
+					"path": [
+						"hello"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Oauth Server getToken - logging inn",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "springdeveloper123",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "test",
+							"type": "string"
+						},
+						{
+							"key": "saveHelperData",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "showPassword",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "springdeveloper123",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "ben",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "pass",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:9000/authservice/oauth/token",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"authservice",
+						"oauth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Oauth TOKEN required accountService",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "4b4b64e5-b3e3-4e94-94a9-b2830594eedb",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "Bearer eb3b674f-434b-4eca-bdfc-cc4e7625f24b",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "Bearer eb3b674f-434b-4eca-bdfc-cc4e7625f24b",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:8888/resource/account",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						"resource",
+						"account"
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"event": [

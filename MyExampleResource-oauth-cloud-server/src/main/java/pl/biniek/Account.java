@@ -1,5 +1,5 @@
 package pl.biniek;
-
+//based on priya-k-
 public class Account {
 	private int accNo;
 	private String accType;
