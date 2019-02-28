@@ -1,4 +1,4 @@
-##config Discovery server
+##config ZUUL server
 #
 #spring:
 #  application:
@@ -17,9 +17,13 @@
 zuul:
   routes:  
     uaa:
-      path: /authservice/**
+      path: /backendauthservice/**
       sensitiveHeaders:
-      serviceId: authservice
+      serviceId: backendauthservice
+    uaa2:
+      path: /frontendauthservice/**
+      sensitiveHeaders:
+      serviceId: frontendauthservice
     account:
       path: /accountservice/**
       sensitiveHeaders: 
