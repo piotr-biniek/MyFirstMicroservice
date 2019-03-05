@@ -1,19 +1,19 @@
 {
 	"info": {
 		"_postman_id": "86e1a332-8f07-4744-9569-416199dd8462",
-		"name": "FamilyCalendar + ZUUL = microservice",
+		"name": "ZUUL + microservice!!!",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "Delete event OAuth Token",
+			"name": "FamulyCalendar  delete event OAuth Token",
 			"request": {
 				"auth": {
 					"type": "bearer",
 					"bearer": [
 						{
 							"key": "token",
-							"value": "2e0918fb-3001-48c3-a123-25fd8c547b30",
+							"value": "63becc17-5a54-45c3-a908-2f870aa62739",
 							"type": "string"
 						}
 					]
@@ -59,14 +59,14 @@
 			"response": []
 		},
 		{
-			"name": "get specufied event OAuth Token",
+			"name": "FamulyCalendar  getSpeyufied event OAuth Token",
 			"request": {
 				"auth": {
 					"type": "bearer",
 					"bearer": [
 						{
 							"key": "token",
-							"value": "2e0918fb-3001-48c3-a123-25fd8c547b30",
+							"value": "63becc17-5a54-45c3-a908-2f870aa62739",
 							"type": "string"
 						}
 					]
@@ -83,7 +83,7 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost:9999/family_calendar/event?id=1",
+					"raw": "http://localhost:9999/family_calendar/event?id=7",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -96,7 +96,7 @@
 					"query": [
 						{
 							"key": "id",
-							"value": "1"
+							"value": "7"
 						}
 					]
 				}
@@ -104,14 +104,14 @@
 			"response": []
 		},
 		{
-			"name": "Create event OAuthToken",
+			"name": "FamilyCalendar  Create event OAuthToken",
 			"request": {
 				"auth": {
 					"type": "bearer",
 					"bearer": [
 						{
 							"key": "token",
-							"value": "2e0918fb-3001-48c3-a123-25fd8c547b30",
+							"value": "63becc17-5a54-45c3-a908-2f870aa62739",
 							"type": "string"
 						}
 					]
@@ -153,14 +153,14 @@
 			"response": []
 		},
 		{
-			"name": "Get  ALL events OAuthToken",
+			"name": "FamulyCalendar Allevents OAuthToken",
 			"request": {
 				"auth": {
 					"type": "bearer",
 					"bearer": [
 						{
 							"key": "token",
-							"value": "2e0918fb-3001-48c3-a123-25fd8c547b30",
+							"value": "6744c6d7-3769-4e48-849d-2099ec9b9e7d",
 							"type": "string"
 						}
 					]
@@ -187,8 +187,11 @@
 			"response": []
 		},
 		{
-			"name": "Get Greeting",
+			"name": "Greeting Service no Oauth",
 			"request": {
+				"auth": {
+					"type": "noauth"
+				},
 				"method": "GET",
 				"header": [
 					{
@@ -202,23 +205,25 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost:9999/greeting/",
+					"raw": "http://localhost:9999/greeting",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "9999",
 					"path": [
-						"greeting",
-						""
+						"greeting"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "Get  greeting + Name",
+			"name": "Greeting + Name",
 			"request": {
+				"auth": {
+					"type": "noauth"
+				},
 				"method": "GET",
 				"header": [
 					{
@@ -252,8 +257,18 @@
 			"response": []
 		},
 		{
-			"name": "Get  hello OAuthRequired",
+			"name": "helloService  OAuthToken Required",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "d085f305-7d2d-4622-9284-ebb8831248e5",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [
 					{
@@ -266,21 +281,100 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost:9999/hello",
+					"raw": "http://localhost:9999/hello/",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "9999",
 					"path": [
-						"hello"
+						"hello",
+						""
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "Simple file upload NoAuth Required",
+			"name": "helloService get  OAuthRequired USERDATA",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "d085f305-7d2d-4622-9284-ebb8831248e5",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46bXlwYXNzd29yZA=="
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:9999/hello/userdata",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9999",
+					"path": [
+						"hello",
+						"userdata"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "helloService get  OAuth Roles",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "d085f305-7d2d-4622-9284-ebb8831248e5",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46bXlwYXNzd29yZA=="
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:9999/hello/auth",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9999",
+					"path": [
+						"hello",
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fileUploadService NoAuth Required",
 			"request": {
 				"method": "PUT",
 				"header": [
@@ -300,13 +394,14 @@
 					]
 				},
 				"url": {
-					"raw": "http://localhost:2349/",
+					"raw": "http://localhost:9999/fileuploader/",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "2349",
+					"port": "9999",
 					"path": [
+						"fileuploader",
 						""
 					]
 				}
@@ -362,42 +457,14 @@
 			]
 		},
 		{
-			"name": "login Try",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "Basic YWRtaW46bXlwYXNzd29yZA=="
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
-				"url": {
-					"raw": "http://localhost:9999/hello",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "9999",
-					"path": [
-						"hello"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Oauth Server getToken - logging inn",
+			"name": "Oauth AuthenticationServer getToken - logging inn + Ref Token",
 			"request": {
 				"auth": {
 					"type": "basic",
 					"basic": [
 						{
 							"key": "username",
-							"value": "springdeveloper123",
+							"value": "123",
 							"type": "string"
 						},
 						{
@@ -422,8 +489,8 @@
 					{
 						"key": "Content-Type",
 						"name": "Content-Type",
-						"value": "application/x-www-form-urlencoded",
-						"type": "text"
+						"type": "text",
+						"value": "application/x-www-form-urlencoded"
 					}
 				],
 				"body": {
@@ -435,8 +502,81 @@
 							"type": "text"
 						},
 						{
-							"key": "client_id",
-							"value": "springdeveloper123",
+							"key": "username",
+							"value": "ben",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "pass",
+							"type": "text"
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:9999/frontendauthservice/oauth/token",
+					"host": [
+						"localhost"
+					],
+					"port": "9999",
+					"path": [
+						"frontendauthservice",
+						"oauth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Oauth AuthenticationServer getToken - noRefToken",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "test",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "123",
+							"type": "string"
+						},
+						{
+							"key": "saveHelperData",
+							"value": false,
+							"type": "boolean"
+						},
+						{
+							"key": "showPassword",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "password",
 							"type": "text"
 						},
 						{
@@ -448,17 +588,23 @@
 							"key": "password",
 							"value": "pass",
 							"type": "text"
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
 						}
 					]
 				},
 				"url": {
-					"raw": "localhost:9000/authservice/oauth/token",
+					"raw": "localhost:9999/frontendauthservice/oauth/token",
 					"host": [
 						"localhost"
 					],
-					"port": "9000",
+					"port": "9999",
 					"path": [
-						"authservice",
+						"frontendauthservice",
 						"oauth",
 						"token"
 					]
@@ -467,14 +613,14 @@
 			"response": []
 		},
 		{
-			"name": "Oauth TOKEN required accountService",
+			"name": "accountService Oauth TOKEN required",
 			"request": {
 				"auth": {
 					"type": "bearer",
 					"bearer": [
 						{
 							"key": "token",
-							"value": "4b4b64e5-b3e3-4e94-94a9-b2830594eedb",
+							"value": "d085f305-7d2d-4622-9284-ebb8831248e5",
 							"type": "string"
 						}
 					]
@@ -499,14 +645,53 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "localhost:8888/resource/account",
+					"raw": "localhost:9999/accountservice/resource/account",
 					"host": [
 						"localhost"
 					],
-					"port": "8888",
+					"port": "9999",
 					"path": [
+						"accountservice",
 						"resource",
 						"account"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "HystrixTestService Copy",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "2e0918fb-3001-48c3-a123-25fd8c547b30",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46bXlwYXNzd29yZA=="
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:9999/hystrix",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9999",
+					"path": [
+						"hystrix"
 					]
 				}
 			},

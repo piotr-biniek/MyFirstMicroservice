@@ -37,7 +37,7 @@ public class TokenStoreConfig {
 		BasicDataSource source = new BasicDataSource();
 		source.setDriverClassName("org.h2.Driver");
 		//source.setUrl("jdbc:h2:~/springtutorial;INIT=runscript from 'classpath:/create.sql'");
-		source.setUrl("jdbc:h2:tcp://localhost/~/test3");
+		source.setUrl("jdbc:h2:tcp://localhost/~/test7");
 		source.setUsername("sa");
 		return source;
 	}
