@@ -2,7 +2,7 @@
 
 spring:
   application:
-    name: hello
+    name: hystrix
     
 
 eureka:
@@ -12,4 +12,4 @@ eureka:
   
 
 server:
-  port: 2347
+  port: 2360
