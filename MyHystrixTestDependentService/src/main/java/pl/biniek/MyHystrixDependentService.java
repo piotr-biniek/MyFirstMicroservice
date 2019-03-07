@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -44,32 +45,8 @@ public class MyHystrixDependentService {
 	}
 
 }
-/////////////////////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////SOME example  DATA!!////////////////////////////////
-///// some test  classes for calling rest +rest + Hystrix  ///////////////////////////////////////////////
-@Getter//project Lombok
-@Setter
-@AllArgsConstructor
-class Vehicle implements  Serializable {
 
-	private static final long serialVersionUID = 727530978477806712L;
-	String name;
-	int wheels;
-	boolean hasDrivingWheel;
-	boolean isTruck;
-	boolean isSlowMoving;
-	
-//	public Vehicle(String name, int wheels, boolean hasDrivingWheel, boolean isTruck, boolean isSlowMoving) {
-//		super();
-//		this.name = name;
-//		this.wheels = wheels;
-//		this.hasDrivingWheel = hasDrivingWheel;
-//		this.isTruck = isTruck;
-//		this.isSlowMoving = isSlowMoving;
-//	}
-}
-
-///////////////// Vechicle generator
+///////////////// data generator
 class VehicleGenerator {
 
 	public static List<Vehicle> getVehicles() {
@@ -83,12 +60,38 @@ class VehicleGenerator {
 		return list;
 	}
 
+
 // test Vehicle data Geneator	
+///////////////////////////////////zbedne 
 	private static boolean generateDataofVehicle() {
 		if ((Math.random() * 10) % 2 == 1)
 			return true;
 		return false;
-
+		
 	}
-
 }
+
+////////////////////////Moved to commons!!/////////////////////////////////////////////////////////////////////////////
+////////////////////////////SOME example  DATA!!////////////////////////////////
+///// some test  classes for calling rest +rest + Hystrix  ///////////////////////////////////////////////
+//@Getter//project Lombok
+//@Setter
+//@AllArgsConstructor
+//class Vehicle implements  Serializable {
+//
+//	private static final long serialVersionUID = 727530978477806712L;
+//	String name;
+//	int wheels;
+//	boolean hasDrivingWheel;
+//	boolean isTruck;
+//	boolean isSlowMoving;
+////lombok or this	
+//	public Vehicle(String name, int wheels, boolean hasDrivingWheel, boolean isTruck, boolean isSlowMoving) {
+//		super();
+//		this.name = name;
+//		this.wheels = wheels;
+//		this.hasDrivingWheel = hasDrivingWheel;
+//		this.isTruck = isTruck;
+//		this.isSlowMoving = isSlowMoving;
+//	}
+//}
