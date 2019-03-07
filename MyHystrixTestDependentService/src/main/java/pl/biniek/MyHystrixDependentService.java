@@ -9,6 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.http.MediaType;
+import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -23,7 +24,7 @@ import lombok.Setter;
 @RestController
 @EnableDiscoveryClient
 @EnableCircuitBreaker
-
+@EnableResourceServer
 public class MyHystrixDependentService {
 
 	public static void main(String[] args) {
@@ -34,7 +35,7 @@ public class MyHystrixDependentService {
 	public List<Vehicle> invokeTest() {
 
 /**
- * Generatong Error sometimes :)
+ * Generating Error sometimes :)
  */
 		if (Math.random() > 0.66)
 			throw new IllegalStateException();
@@ -50,12 +51,14 @@ public class MyHystrixDependentService {
 @Setter
 @AllArgsConstructor
 class Vehicle implements  Serializable {
+
+	private static final long serialVersionUID = 727530978477806712L;
 	String name;
 	int wheels;
 	boolean hasDrivingWheel;
 	boolean isTruck;
 	boolean isSlowMoving;
-
+	
 //	public Vehicle(String name, int wheels, boolean hasDrivingWheel, boolean isTruck, boolean isSlowMoving) {
 //		super();
 //		this.name = name;

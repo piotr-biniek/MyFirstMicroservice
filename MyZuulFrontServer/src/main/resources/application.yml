@@ -37,6 +37,10 @@ zuul:
       sensitiveHeaders: 
       serviceId: family_calendar    
 
+    hystrixmasterservice:
+      path: /masterservice/**
+      sensitiveHeaders: 
+      serviceId: masterservice    
 
 
 
