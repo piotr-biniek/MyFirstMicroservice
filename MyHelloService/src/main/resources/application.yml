@@ -2,14 +2,13 @@
 
 spring:
   application:
-    name: hystrix
+    name: hello
     
 
 eureka:
   client:
    serviceUrl:
     defaultZone: http://localhost:8761/eureka http://localhost:8762/eureka
-  
 
 server:
-  port: 2360
+  port: 2347

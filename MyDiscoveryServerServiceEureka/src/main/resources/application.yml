@@ -1,15 +1,24 @@
 #config Discovery server
+spring:
+  application:
+    name: eureka
 
 eureka:
-  instance:
+  instance: 
     hostname: localhost
   client:
-    registerWithEureka: false
-    fetchRegistry: false
-
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8762/eureka
+    registerWithEureka: true
+    fetchRegistry: true
 server:
   port: 8761
   
+
+ 
+ 
+ 
+ 
   
 # OR application.propperties =
 #spring.application.name=eureka-service

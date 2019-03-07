@@ -15,13 +15,14 @@ W przypadku ms. wymagających autentykacji ma zdefiniowane zasady na stałe w pl
 Dodatkowo ustawiona jeest konfiguracja Hystrix - w przypadku routingów zdefiniowanych w pliku konfiguracyjnym, jeżeli servis leży otrzymamy o tym informację zamiast 404 lub cokolwiek innego.
 
 #### MyDiscoveryServerServiceEureka
-Servis Eureka wykożystywany przez zuula przy routingu aplikacji niezarejestrowanych i zarejestrowanych, informacja o ilości instancji, adresach przekierowania dla ZUULA 
+Servis Eureka wykorzystywany przez zuula przy routingu aplikacji niezarejestrowanych i zarejestrowanych, informacja o ilości instancji, adresach przekierowania dla ZUULA 
 
 #### MyAuth-cloud-server_withRefToke
-Serwer odpowiadający tokenem w przypadku prawidłowych danych autentykacyjnych (polecam sprawdzić pliki postmana) i refreshTokenem
+Serwer odpowiadający tokenem w przypadku prawidłowych danych autentykacyjnych (polecam sprawdzić pliki postmana) i refreshTokenem.
+W serwisie funkcjonuje prosty TokenStore (H2), pozwalający na utrwalenie tokenów tak więc nawet przy padzie serwera i jego powstaniu możliwe jest dalsze kożystane z tokena
 
 #### MyAuth-cloud-server_withRefToke
-Odpowiada tylko tokenem, brak refreshTokena!
+Odpowiada tylko tokenem, brak refreshTokena! Współdzielona baza z w/w serwisem.
 
 ### Proste ms.
 
