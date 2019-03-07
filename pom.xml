@@ -1,0 +1,35 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+
+	<groupId>biniek.pl</groupId>
+	<artifactId>parent</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+
+	<name>My First Microservice</name>
+
+	<properties>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+	</properties>
+
+	<modules>
+		<module>MyAuth-cloud-server_noRefresh</module>
+		<module>MyAuth-cloud-server_withRefToke</module>
+		<module>MyDiscoveryServerServiceEureka</module>
+		<module>MyDiscoveryServerServiceEureka2</module>
+		<module>MyExampleResource-oauth-cloud-server</module>
+		<module>MyFileUploadService</module>
+		<module>MyGreetingMicroservice</module>
+		<module>MyHelloService</module>
+		<module>MyHystrixTestDependentService</module>
+		<module>MyHystrixTestMasterService</module>
+		<module>MyServiceForHystrix</module>
+		<module>MyZuulFrontServer</module>
+		<module>MyFamily_calendar_microservice</module>
+	</modules>
+</project>

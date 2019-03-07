@@ -10,9 +10,9 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>pl.biniek</groupId>
-	<artifactId>MyShortHelloService</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>MyHelloService</name>
+	<artifactId>MyServiceForHystrix</artifactId>
+	<version>MyServiceForHystrix</version>
+	<name>MyServiceForHystrix</name>
 	<description>DiscoveryLearning</description>
 
 	<properties>

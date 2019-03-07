@@ -8,10 +8,10 @@
 		<version>2.1.2.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.example</groupId>
-	<artifactId>_priya-k-cloud-sec-resource</artifactId>
+	<groupId>pl.biniek</groupId>
+	<artifactId>MyExampleResource-oauth-cloud-server</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>_priya-k-cloud-sec-resource</name>
+	<name>MyExampleResource-oauth-cloud-server</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>

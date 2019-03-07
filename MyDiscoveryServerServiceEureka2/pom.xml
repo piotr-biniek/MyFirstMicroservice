@@ -11,9 +11,9 @@
 	<packaging>jar</packaging>
 	
 	<groupId>pl.biniek</groupId>
-	<artifactId>DiscoveryServerServiceEureka</artifactId>
+	<artifactId>MyDiscoveryServerServiceEureka2</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>DiscoveryServerServiceEureka</name>
+	<name>MyDiscoveryServerServiceEureka2</name>
 	<description>DiscoveryLearning</description>
 
 	<properties>

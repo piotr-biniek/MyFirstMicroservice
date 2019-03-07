@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>pl.biniek</groupId>
-	<artifactId>DiscoveryServerServiceEureka</artifactId>
+	<artifactId>MyDiscoveryServerServiceEureka</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>DiscoveryServerServiceEureka</name>
+	<name>MyDiscoveryServerServiceEureka</name>
 	<description>DiscoveryLearning</description>
 
 	<properties>

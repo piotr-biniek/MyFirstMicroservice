@@ -9,10 +9,10 @@
 		<version>2.1.2.RELEASE</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.example</groupId>
-	<artifactId>_priya-k-cloud-sec-auth-server</artifactId>
+	<groupId>pl.biniek</groupId>
+	<artifactId>MyAuth-cloud-server_withRefToke</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>_priya-k-cloud-sec-auth-server</name>
+	<name>MyAuth-cloud-server_withRefToke</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>

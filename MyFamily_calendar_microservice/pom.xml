@@ -11,10 +11,10 @@
 	</parent>
 
 	<groupId>pl.biniek</groupId>
-	<artifactId>family_calendar_microservice</artifactId>
+	<artifactId>MyFamily_calendar_microservice</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>family_calendar_microservice</name>
-	<description>LLearning  Spring Boot Microservice and JSON REST</description>
+	<name>MyFamily_calendar_microservice</name>
+	<description>Learning  Spring Boot Microservice and JSON REST</description>
 
 	<properties>
 		<java.version>1.8</java.version>
