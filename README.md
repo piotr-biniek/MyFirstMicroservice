@@ -17,9 +17,13 @@ Dodatkowo ustawiona jeest konfiguracja Hystrix - w przypadku routingów zdefinio
 #### MyDiscoveryServerServiceEureka
 Servis Eureka wykorzystywany przez zuula przy routingu aplikacji niezarejestrowanych i zarejestrowanych, informacja o ilości instancji, adresach przekierowania dla ZUULA 
 
+
+#### MyDiscoveryServerServiceEureka2
+Ponieważ jar z 2 konfiguracją eureki miał 43 mega, zdecydowałem się zdublować eurekę i wepchnąć ją, trzeba będzie pomyśleć o kilku profilach, na razie tymczasowe rozwiązanie
+
 #### MyAuth-cloud-server_withRefToke
 Serwer odpowiadający tokenem w przypadku prawidłowych danych autentykacyjnych (polecam sprawdzić pliki postmana) i refreshTokenem.
-W serwisie funkcjonuje prosty TokenStore (H2), pozwalający na utrwalenie tokenów tak więc nawet przy padzie serwera i jego powstaniu możliwe jest dalsze kożystane z tokena
+W serwisie funkcjonuje prosty TokenStore (H2), pozwalający na utrwalenie tokenów tak więc nawet przy padzie serwera i jego powstaniu możliwe jest dalsze korzystane z tokena
 
 #### MyAuth-cloud-server_withRefToke
 Odpowiada tylko tokenem, brak refreshTokena! Współdzielona baza z w/w serwisem.
