@@ -31,9 +31,6 @@ Prosty serwis, bez potrzeby autoryzacji odpowiadający na reście powitaniem lub
 #### MyExampleResource-oauth-cloud-server
 Pirwszy ms. oczekujący bearerTokena i w zamian udostępniający jakieś informacje o jakichś kontach (nie moim :))
 
-#### MyFamily_calendar_microservice
-Kiedyś był to być kalendaż rodzinny w JavieEE potem przerabiałem na Springa, ale nie zrobiłem frontu w springu (ani w niczym innym), na potrzeby nauki ms. zostały z niego szczątki na potrzeby autoryzacji i przeprowadzania operacji na bazie (H2)
-
 #### MyFileUploadService
 W ramach początkowej nauki springa udostępnia resta którym można przesłać plik na server
 
@@ -41,6 +38,10 @@ W ramach początkowej nauki springa udostępnia resta którym można przesłać 
 Prosty servis z wykożystaniem hystrixa, generuje losowo błąd który jest wyłapywany rzez Hystrix
 
 ### Dalsze ciekawsze ms.y
+
+#### MyFamily_calendar_microservice
+Kiedyś był to być kalendaż rodzinny w JavieEE potem przerabiałem na Springa, ale nie zrobiłem frontu w springu (ani w niczym innym), na potrzeby nauki ms. zostały z niego szczątki na potrzeby autoryzacji i przeprowadzania operacji na bazie (H2) przez RESTa
+
 
 #### MyHelloService
 Początkowo bardzo prosty servis - "Hello world", powoli przebudowywany, dodano autoryzację, dalej dodano endpońty które zwracają pełne Principal (które są automatycznie pobierane z servera), oraz GranthedAutority do dalszego wykożystania ....
