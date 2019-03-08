@@ -33,6 +33,8 @@ import org.springframework.web.client.RestTemplate;
 
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 
+import pl.biniek.bearertokenextractor.MyBearerTokenExtractor;
+
 @SpringBootApplication
 @RestController
 @EnableDiscoveryClient

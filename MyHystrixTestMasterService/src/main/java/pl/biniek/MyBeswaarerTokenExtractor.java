@@ -32,7 +32,7 @@ import org.springframework.security.web.authentication.preauth.PreAuthenticatedA
 //TODO should be in commons
 
 	
-public class MyBearerTokenExtractor implements TokenExtractor {
+public class MyBeswaarerTokenExtractor implements TokenExtractor {
 
 
 	/**
@@ -44,7 +44,7 @@ public class MyBearerTokenExtractor implements TokenExtractor {
 	 * 
 	 */
 
-		private final static Log logger = LogFactory.getLog(MyBearerTokenExtractor.class);
+		private final static Log logger = LogFactory.getLog(MyBeswaarerTokenExtractor.class);
 
 		@Override
 		public  Authentication extract(HttpServletRequest request) {

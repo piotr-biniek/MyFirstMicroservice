@@ -16,10 +16,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
+
+import pl.biniek.vecicle.Vehicle;
 
 @SpringBootApplication
 @RestController
