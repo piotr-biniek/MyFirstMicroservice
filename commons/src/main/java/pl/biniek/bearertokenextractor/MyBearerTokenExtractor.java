@@ -1,4 +1,6 @@
-package pl.biniek;
+package pl.biniek.bearertokenextractor;
+
+
 import java.util.Enumeration;
 
 import javax.servlet.http.HttpServletRequest;
@@ -32,7 +34,7 @@ import org.springframework.security.web.authentication.preauth.PreAuthenticatedA
 //TODO should be in commons
 
 	
-public class MyBeswaarerTokenExtractor implements TokenExtractor {
+public class MyBearerTokenExtractor implements TokenExtractor {
 
 
 	/**
@@ -44,7 +46,7 @@ public class MyBeswaarerTokenExtractor implements TokenExtractor {
 	 * 
 	 */
 
-		private final static Log logger = LogFactory.getLog(MyBeswaarerTokenExtractor.class);
+		private final static Log logger = LogFactory.getLog(MyBearerTokenExtractor.class);
 
 		@Override
 		public  Authentication extract(HttpServletRequest request) {
@@ -56,7 +58,7 @@ public class MyBeswaarerTokenExtractor implements TokenExtractor {
 			return null;
 		}
 
-		protected  String extractToken(HttpServletRequest request) {
+		public String extractToken(HttpServletRequest request) {
 			// first check the header...
 			String token = extractHeaderToken(request);
 
@@ -81,7 +83,7 @@ public class MyBeswaarerTokenExtractor implements TokenExtractor {
 		 * @param request The request.
 		 * @return The token, or null if no OAuth authorization header was supplied.
 		 */
-		protected  String extractHeaderToken(HttpServletRequest request) {
+		public  String extractHeaderToken(HttpServletRequest request) {
 			Enumeration<String> headers = request.getHeaders("Authorization");
 			while (headers.hasMoreElements()) { // typically there is only one (most servers enforce that)
 				String value = headers.nextElement();
