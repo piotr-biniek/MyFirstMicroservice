@@ -61,8 +61,7 @@ public class MyHystrixMasterService {
 
 		RestTemplate restTemplate = new RestTemplate();
 		String token = getToken(request);
-		System.out.println(token);
-
+		
 		HttpHeaders headers = new HttpHeaders();
 		headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
 	//	headers.setContentType(MediaType.APPLICATION_JSON);//wtf błędy

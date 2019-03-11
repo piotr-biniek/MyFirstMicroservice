@@ -32,8 +32,8 @@ public class MyHystrixDependentService {
 	}
 
 	@RequestMapping(value = "/getmydata", produces = MediaType.APPLICATION_JSON_VALUE, method = RequestMethod.GET)
-	//@IsAdmin //my annotation for checking ROLE not working :D:D:D
-	@PreAuthorize("hasRole('ROLE_ADMIN')")
+	@IsAdmin //my annotation for checking after configurating is  working :D:D:D
+	//@PreAuthorize("hasRole('ROLE_ADMIN')")
 	public List<Vehicle> invokeTest() {
 
 /**
