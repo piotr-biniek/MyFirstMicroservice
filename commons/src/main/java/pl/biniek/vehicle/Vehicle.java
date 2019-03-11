@@ -1,4 +1,4 @@
-package pl.biniek.vecicle;
+package pl.biniek.vehicle;
 
 import java.io.Serializable;
 

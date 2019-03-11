@@ -34,6 +34,7 @@ import org.springframework.web.client.RestTemplate;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 
 import pl.biniek.bearertokenextractor.MyBearerTokenExtractor;
+import pl.biniek.vehicle.Vehicle;
 
 @SpringBootApplication
 @RestController
@@ -70,7 +71,7 @@ public class MyHystrixMasterService {
 		HttpEntity<String> entity = new HttpEntity<String>("parameters", headers);
 
 		ResponseEntity<List> result = restTemplate.exchange(anotherServiceHttp, HttpMethod.GET, entity, List.class);
-		List<?> myList = result.getBody();
+		List<Vehicle> myList = result.getBody();
 
 		return myList;
 

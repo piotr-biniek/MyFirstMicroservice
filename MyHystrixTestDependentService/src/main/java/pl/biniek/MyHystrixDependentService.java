@@ -9,6 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.http.MediaType;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -16,8 +17,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 
-
-import pl.biniek.vecicle.Vehicle;
+import pl.biniek.authoritysCheck.IsAdmin;
+import pl.biniek.vehicle.Vehicle;
 
 @SpringBootApplication
 @RestController
@@ -31,6 +32,8 @@ public class MyHystrixDependentService {
 	}
 
 	@RequestMapping(value = "/getmydata", produces = MediaType.APPLICATION_JSON_VALUE, method = RequestMethod.GET)
+	//@IsAdmin //my annotation for checking ROLE not working :D:D:D
+	@PreAuthorize("hasRole('ROLE_ADMIN')")
 	public List<Vehicle> invokeTest() {
 
 /**
